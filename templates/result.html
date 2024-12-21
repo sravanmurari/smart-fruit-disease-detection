@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <title>Prediction Result</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Prediction Result</h1>
+        <h3>Predicted Class: <span style="color: #0026ff;">{{ predicted_class }}</span></h3>
+        <img src="{{ image_url }}" alt="Uploaded Image" class="result-image">
+        <h3>Do you need pesticide recommendations?</h3>
+        <form action="/pesticide-recommendations" method="post">
+            <input type="hidden" name="predicted_class" value="{{ predicted_class }}">
+            <button type="submit" class="submit-image">Yes</button>
+        </form>
+        <a href="/" class="back-button">Back</a>
+    </div>
+</body>
+</html>

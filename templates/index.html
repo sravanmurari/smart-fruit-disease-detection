@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>Fruit Disease Detection</title>
+</head>
+<body class="bg-fruits">
+    <header>
+        <h1>Smart Fruit Disease Detection</h1>
+        <p>Upload your fruit images to get accurate disease predictions and expert pesticide recommendations.</p>
+        <div class="nav-corner">
+            <nav>
+                <a href="/" class="nav-link"><b>Home</b></a>
+                <a href="/" class="nav-link"><b>About</b></a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="upload-section">
+            <h2>Select and Upload an Image</h2>
+            <div class="upload-box">
+                <form action="/predict" method="POST" enctype="multipart/form-data">
+                    <label class="custom-file-upload">
+                        <input type="file" name="image" accept="image/*" required>
+                        <span>Choose Image</span>
+                    </label>
+                    <button type="submit">Classify</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="info-section">
+            <div class="info-cards">
+                <div class="info-card">
+                    <i class="fas fa-apple-alt fa-3x" style="color: #4CAF50;"></i>
+                    <h3>Healthy Fruits</h3>
+                    <p>Promoting healthy fruit consumption and protection.</p>
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-spray-can fa-3x" style="color: #4CAF50;"></i>
+                    <h3>Effective Solutions</h3>
+                    <p>Get expert pesticide recommendations for fruit diseases.</p>
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-seedling fa-3x" style="color: #4CAF50;"></i>
+                    <h3>Fruit Insights</h3>
+                    <p>Learn about different fruit diseases and prevention methods.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Smart Fruit Disease Detection. All rights reserved.</p>
+        <p>Our mission is to support farmers and fruit enthusiasts in recognizing and addressing fruit diseases effectively.</p>
+    </footer>
+</body>
+</html>

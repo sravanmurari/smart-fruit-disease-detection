@@ -1,0 +1,182 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* Full viewport height */
+    background-image: url('https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.vectorstock.com%2Froyalty-free-vector%2Fdifferent-of-fruits-realistic-vector-21566878&psig=AOvVaw0wIt3iBRO1bsyicRcRFCoC&ust=1730732469384000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCJjUyoK3wIkDFQAAAAAdAAAAABAEhttps://cdn.vectorstock.com/i/1000v/68/78/different-of-fruits-realistic-vector-21566878.avif'); /* A vibrant fruit background */
+    background-size: cover;
+    background-position: center;
+    color: #333; /* Dark text for better readability */
+    background: linear-gradient(135deg, #27cce6, #f3f2f3);
+}
+
+header {
+    text-align: center;
+    margin: 50px 0;
+    position: relative; /* Allows positioning of child elements */
+}
+
+h1 {
+    font-size: 2.5em;
+    color: red; /* Change title color to red */
+}
+
+h2 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    color: rgb(0, 128, 9); /* Bright yellow for headings */
+}
+.nav-corner {
+    position: absolute; /* Absolute positioning for corner placement */
+    top: 20px; /* Distance from the top */
+    right: 20px; /* Distance from the right */
+}
+
+.nav-link {
+    color: #000000; /* Yellow color for links */
+    margin-right: 20px; /* Space between links */
+    text-decoration: none; /* Remove underline */
+    font-size: 1.1em; /* Font size for links */
+    transition: color 0.3s ease; /* Transition effect */
+}
+
+.nav-link:hover {
+    color: #ffc107; /* Slightly darker yellow on hover */
+}
+
+.upload-section {
+    color:green;
+    text-align: center;
+    margin-bottom: 40px;
+    overflow-y: auto; /* Allow vertical scrolling for this section */
+    max-height: calc(100vh - 200px); /* Set max height to avoid overflow */
+}
+
+.upload-box {
+    display: inline-block; /* Center the box */
+    border: 2px solid #ffcc00; /* Yellow border */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px; /* Inner spacing */
+    background-color: rgba(255, 255, 255, 0.8); /* Light transparent background for contrast */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Slight shadow for depth */
+    width: 300px; /* Fixed width for a better layout */
+}
+
+.custom-file-upload {
+    display: block; /* Make it block level to take full width */
+    padding: 15px; /* Larger clickable area */
+    cursor: pointer;
+    border: 2px solid #ffcc00; /* Yellow border */
+    border-radius: 5px;
+    color: #ffcc00; /* Yellow text color */
+    background-color: rgba(255, 255, 255, 0.3); /* Slightly transparent background */
+    transition: background-color 0.3s ease;
+    text-align: center; /* Center the text inside */
+    font-size: 1em; /* Adjust font size */
+    margin-bottom: 15px; /* Space below the file upload */
+}
+
+.custom-file-upload:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+button {
+    padding: 15px; /* Larger button padding */
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(17, 170, 17); /* Yellow button */
+    color: black; /* Dark text for better contrast */
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%; /* Full width for the button */
+}
+
+button:hover {
+    background-color: #29ed2d; /* Slightly darker yellow on hover */
+}
+
+.info-section {
+    text-align: center;
+}
+
+.info-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Allows cards to wrap on smaller screens */
+    margin-top: 20px;
+}
+.info-card {
+    background-color: rgba(255, 255, 255, 0.8); /* Light transparent white for better readability */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    margin: 10px;
+    flex: 1; /* Allow cards to take equal space */
+    max-width: 300px; /* Set max-width for better alignment */
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+.info-card:hover {
+    transform: scale(1.25); /* Slightly enlarge the card */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); /* Increase shadow on hover */
+}
+
+footer {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 0.9em;
+    color: #666; /* Light gray for footer text */
+}
+
+.container {
+    max-width: 800px; /* Max width for the container */
+    margin: 50px auto; /* Center the container */
+    padding: 20px; /* Inner spacing */
+    background-color: rgba(255, 255, 255, 0.8); /* Light transparent background */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+    text-align: center; /* Center text */
+}
+
+.result-area {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center; /* Center items vertically */
+    align-items: center; /* Center items horizontally */
+    height: 100vh; /* Full height for centering */
+    margin: 0; /* Remove any margin */
+}
+
+.result-image {
+    width: 300px !important; /* Set a fixed width for the image */
+    height: auto !important; /* Maintain the aspect ratio */
+    border-radius: 10px; /* Rounded corners for the image */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Shadow for image */
+    margin: 20px 0; /* Add some margin above and below */
+}
+
+.submit-image {
+    padding: 10px 20px; /* Button padding */
+    border: none;
+    border-radius: 5px;
+    background-color: #ffcc00; /* Yellow button */
+    color: black; /* Dark text for better contrast */
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px; /* Space above the button */
+}
+
+.submit-image:hover {
+    background-color: #ffc107; /* Slightly darker yellow on hover */
+}
+
+.back-button {
+    display: inline-block; /* Make it block level */
+    margin-top: 15px; /* Space above */
+    color: #4CAF50; /* Green color for back link */
+    text-decoration: underline; /* Underlined text */
+    font-size: 1.1em; /* Font size for link */
+}

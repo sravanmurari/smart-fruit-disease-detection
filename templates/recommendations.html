@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <title>Pesticide Recommendations</title>
+    <style>
+        .recommendations-container {
+            white-space: pre-wrap;       /* Allow wrapping while preserving whitespace */
+            word-wrap: break-word;       /* Break long words */
+            overflow-wrap: break-word;   /* Similar to word-wrap */
+            max-width: 100%;             /* Fit within the container */
+            background-color: rgba(255, 255, 255, 0.8); /* Background for visibility */
+            padding: 10px;               /* Padding for readability */
+            border-radius: 5px;          /* Rounded corners */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+            text-align: left;            /* Align text to the left */
+            font-family: 'Arial', sans-serif; /* Set a consistent font */
+        }
+        .recommendation-item {
+            margin-left: 20px;           /* Indentation for each recommendation */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Pesticide Recommendations for {{ predicted_class }}</h1>
+        <div class="recommendations-container">
+            {% for recommendation in recommendations %}
+                <div class="recommendation-item">{{ recommendation|safe }}</div>
+            {% endfor %}
+        </div>
+        <a href="/" class="back-button">Back</a>
+    </div>
+</body>
+</html>
